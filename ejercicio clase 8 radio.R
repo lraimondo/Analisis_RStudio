@@ -1,37 +1,13 @@
-#####################################################################
-# UCU 2020                                                                                                                   #
-# Curso: DATA SCIENCE                                                                                              #
-# Script: CLASE 8 MODELO DE REGRESION LINEAL SIMPLE                                # 
-####################################################################
 
+#MODELO DE REGRESION LINEAL SIMPLE                            
 
-# Descargamos el dataset Publicidad.xlsx desde Webasignatura
-# Importamos el dataset Publicidad.xlsx a RStudio:
-
-# File > Import Dataset > From Excel...
-
-# La base de datos Publicidad.xlsx consiste en las ventas de un producto en 200 mercados diferentes
-# junto con presupuestos publicitarios para el producto en cada uno de esos mercados para tres medios
-# diferentes: TV, Radio y Diarios
-# Las variables son:
-#   VENTAS: ventas del articulo, expresadas en miles de unidades. Es la varable a predecir (Y)
-#   ID: representa uno de los mercados donde se comercializa el producto
-#   TV: gasto en publicidad en television , expresado en miles de $
-#   RADIO: gasto en publicidad en RADIO, expresado en miles de $
-#   DIARIOS: gasto en publicidad en DIARIOS, expresado en miles de $
-
-
-# Usaremos las t閏nicas de Regresi髇 Lineal en estos datos. 
 # Realizamos primero un Analisis Exploratorio preliminar de los datos
 
 # Estos comandos ayudan a visualizar el tipo de datos que tenemos en la base de datos
 View(Publicidad)
 
-# Vemos la distribuci髇 de los datos
-par(mfrow=c(2,2))   # Para poder ver varios gr醘icos al mismo tiempo. El primer     
-# argumento c(,) 
-# son las filas y el segundo la cantidad de columnas en las que lo 
-# queremos dividir.  
+# Vemos la distribuci贸n de los datos
+par(mfrow=c(2,2))   # Para poder ver varios gr谩ficos al mismo tiempo. El primer     
 
 # Histogramas
 hist(Publicidad$TV, xlab="TV", main="Gastos en TV" , col="red")
@@ -49,17 +25,17 @@ boxplot(Publicidad$VENTAS,xlab="Ventas", main="Ventas en miles de unidades", col
 summary(Publicidad) # La variable X representa el ID de las observaciones 
 summary(Publicidad[,-1]) # Eliminamos ID del resumen de indicadores estadisticos
 
-# Matriz de correlaci髇 
+# Matriz de correlaci贸n 
 # Observamos la correlacion entre la variable a predecir (Y:VENTAS) y las predictoras (medos de publicidad: Xs)
 cor(Publicidad[,-1])
 
-# Gr醘icos de dispersi髇 entre la variable a predecir (VENTAS) y cada uno de los 3 medios de publicidad
+# Gr谩ficos de dispersi贸n entre la variable a predecir (VENTAS) y cada uno de los 3 medios de publicidad
 par(mfrow=c(1,3))  
 
 plot(Publicidad$RADIO, Publicidad$VENTAS, xlab="RADIO", ylab="Ventas", col = "deeppink2")
 abline(lm(Publicidad$VENTAS~Publicidad$RADIO), col="blueviolet", lwd=2)   
-# Para incluir la recta de regresi髇 lineal utilizo el comando abline
-# incluye la f髍mula para la regresi髇 lineal en RStudio:  Y ~ X 
+# Para incluir la recta de regresi贸n lineal utilizo el comando abline
+# incluye la f贸rmula para la regresi贸n lineal en RStudio:  Y ~ X 
 
 plot(Publicidad$RADIO, Publicidad$VENTAS,xlab="Radio", ylab="Ventas", col = "red")
 abline(lm(Publicidad$VENTAS~ Publicidad$RADIO), col="blue", lwd=2)
@@ -68,7 +44,7 @@ plot(Publicidad$DIARIOS, Publicidad$VENTAS,xlab="Diarios", ylab="Ventas", col = 
 abline(lm(Publicidad$VENTAS~Publicidad$DIARIOS), col="blue", lwd=2)
 
 
-par(mfrow=c(1,1)) # Volvemos a la configuraci髇 inicial. 
+par(mfrow=c(1,1)) # Volvemos a la configuraci贸n inicial. 
 
 # MODELO DE REGRESION LINEAL SIMPLE
 
@@ -85,7 +61,7 @@ train = sample(nrow(Publicidad),nrow(Publicidad)*0.7) # Elegimos al azar el 70% 
 # TEST: Base de prueba
 test  <- (-train)  
 
-# Estimaci髇 del Modelo de Regresion Lineal Simple
+# Estimaci贸n del Modelo de Regresion Lineal Simple
 # VENTAs en funcion d elos gastos en TV
 # Se busca predecir las ventas con el presupuesto de gastos en TV
 
