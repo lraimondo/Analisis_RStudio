@@ -1,7 +1,6 @@
 # UCU 2020                 
 # Proyecto final DATA SCIENCE
-# Integrantes: Bruno Cabrera, Tom醩 Manggiarotti, Sol Preusse, Luc韆 Raimondo y Carolina Savio
-#############################################################################################
+
 
 #### Ejercicio 2 ####
 
@@ -19,10 +18,10 @@ TABLA_nivelSE
 
 #Diagrama de caja
 
-boxplot(Proyecto$Ingreso ~ Proyecto$Nivel.SE.Alto, xlab="Nivel socioecon髆ico alto", ylab="Ingreso", main = 'Ingresos vs Nivel socioecon髆ico alto', cex.main=1, col="dodgerblue")
-boxplot(Proyecto$Ant.Lab ~ Proyecto$Nivel.SE.Alto, xlab="Nivel socioecon髆ico alto", ylab="Antiguedad laboral", main = 'Antiguedad laboral vs Nivel socioecon髆ico alto', cex.main=1, col="dodgerblue")
-boxplot(Proyecto$Hab ~ Proyecto$Nivel.SE.Alto, xlab="Nivel socioecon髆ico alto", ylab="Habitantes del hogar", main = 'Habitantes del hogar vs Nivel socioecon髆ico alto', cex.main=1, col="dodgerblue")
-boxplot(Proyecto$Edu.Ter ~ Proyecto$Nivel.SE.Alto, xlab="Nivel socioecon髆ico alto", ylab="Educacion Terciaria", main = 'Educacion Terciaria vs Nivel socioecon髆ico alto', cex.main=1, col="dodgerblue")
+boxplot(Proyecto$Ingreso ~ Proyecto$Nivel.SE.Alto, xlab="Nivel socioecon贸mico alto", ylab="Ingreso", main = 'Ingresos vs Nivel socioecon贸mico alto', cex.main=1, col="dodgerblue")
+boxplot(Proyecto$Ant.Lab ~ Proyecto$Nivel.SE.Alto, xlab="Nivel socioecon贸mico alto", ylab="Antiguedad laboral", main = 'Antiguedad laboral vs Nivel socioecon贸mico alto', cex.main=1, col="dodgerblue")
+boxplot(Proyecto$Hab ~ Proyecto$Nivel.SE.Alto, xlab="Nivel socioecon贸mico alto", ylab="Habitantes del hogar", main = 'Habitantes del hogar vs Nivel socioecon贸mico alto', cex.main=1, col="dodgerblue")
+boxplot(Proyecto$Edu.Ter ~ Proyecto$Nivel.SE.Alto, xlab="Nivel socioecon贸mico alto", ylab="Educacion Terciaria", main = 'Educacion Terciaria vs Nivel socioecon贸mico alto', cex.main=1, col="dodgerblue")
 
 #Histogramas
 
